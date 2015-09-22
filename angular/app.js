@@ -1,4 +1,1 @@
-(function () {
-    'use strict';
-    angular.module('ImageSearcherApp', ['controllers']);
-})();
+var app = angular.module('ImageSearcherApp', []);

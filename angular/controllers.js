@@ -1,7 +1,5 @@
-(function(){
-    'use strict';
-    angular.module('controllers', [])
-        .controller('wikipediaController', ['$scope', function($scope){
-            $scope.hola = "hola";
-        }]);
-})();
+app.controller('imageSearcherController', ['$scope', 'imageSearcherService', function($scope, imageSearcherService) {
+  imageSearcherService.success(function(data){
+    $scope.data1 = data;
+  });
+}]);
