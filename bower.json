@@ -1,0 +1,19 @@
+{
+  "name": "image_search",
+  "version": "0.0.0",
+  "authors": [
+    "Gibran Arias <gibranarias@gmail.com>"
+  ],
+  "description": "angular app, this is just to practice",
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-mocks": "~1.4.6",
+    "angular-sanitize": "~1.4.6",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}
