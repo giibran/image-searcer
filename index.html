@@ -37,7 +37,21 @@
 </nav>
 
 <div class="container body-content" ng-controller="imageSearcherController">
-{{ data1 }}
+    <div ng-repeat="image in images.hits">
+        {{ image.tags }}
+        <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" ng-src="{{image.previewURL}}" data-holder-rendered="true">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading" ng-bind="{{ image.tags }}"></h4>
+        {{ image.previewHeight}}
+        {{ image.user}}
+      </div>
+    </div>
+    </div>
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
