@@ -1,6 +1,4 @@
-(function(){
-    angular.module(
-        'ImageSearcherApp',
-        ['ImageSearcherController']
-    );
+(function () {
+    'use strict';
+    angular.module('ImageSearcherApp', ['controllers']);
 })();
