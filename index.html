@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="main.css">
     <title>Image searcher</title>
 </head>
-<body>
+<body ng-app="ImageSearcherApp">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -36,7 +36,29 @@
     </div>
 </nav>
 
+<div class="container body-content" ng-controller="imageSearcherController">
+    <div ng-repeat="image in images.hits">
+        {{ image.tags }}
+        <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" ng-src="{{image.previewURL}}" data-holder-rendered="true">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading" ng-bind="{{ image.tags }}"></h4>
+        {{ image.previewHeight}}
+        {{ image.user}}
+      </div>
+    </div>
+    </div>
+</div>
+
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="angular/app.js"></script>
+<script src="angular/controllers.js"></script>
+<script src="angular/services.js"></script>
 </body>
 </html>
